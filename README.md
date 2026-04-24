@@ -4,8 +4,7 @@
 
 <br/>
 
-## ⚽ Player Profile: Alan Peñaloza
-**`AGE: 20` | `POSITION: FULL-STACK PLAYMAKER` | `CLUB: UTA - FISEI`**
+
 
 ---
 
