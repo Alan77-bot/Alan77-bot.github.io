@@ -403,6 +403,7 @@
   <div class="nav-logo">⚽ Legends</div>
   <ul class="nav-links">
     <li><a href="#jugadores">Jugadores</a></li>
+    <li><a href="#fotos">Fotos</a></li>
     <li><a href="#timeline">Historia</a></li>
     <li><a href="#comparacion">Comparación</a></li>
   </ul>
@@ -414,22 +415,26 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">⚽ Mis Jugadores Favoritos</div>
+  <div class="hero-badge">⚽ La Página de Alan Peñaloza</div>
   <h1>
     <span class="blue">MESSI</span><br/>
-    <span style="font-size:0.35em;color:var(--muted);letter-spacing:8px;">VS</span><br/>
+    <span style="font-size:0.35em;color:var(--muted);letter-spacing:8px;">&</span><br/>
     <span class="yellow">NEYMAR</span>
   </h1>
-  <p>Dos genios que redefinieron el fútbol moderno. Talento, magia y goles que quedan para siempre en la historia del deporte rey.</p>
+  <p>El fútbol es mi pasión y estos dos cracks son mis jugadores favoritos de toda la vida. Verlos jugar es pura magia — no hay nada igual. 🔥</p>
   <div class="hero-divider"></div>
-  <div class="scroll-hint">↓ &nbsp; Scroll para explorar &nbsp; ↓</div>
+  <div style="margin-top:20px;padding:16px 28px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;font-size:0.9rem;color:var(--muted);max-width:500px;animation:fadeUp 0.8s 0.5s ease both;">
+    💬 <em>"El fútbol no es solo un deporte, es una forma de sentir la vida"</em> — Alan
+  </div>
+  <div class="scroll-hint" style="margin-top:40px;">↓ &nbsp; Scroll para explorar &nbsp; ↓</div>
 </section>
 
 <!-- PLAYERS -->
 <section id="jugadores">
   <div class="section-title">
-    <span>⭐ Las Leyendas</span>
-    <h2>Conoce a los Cracks</h2>
+    <span>⭐ Mis Jugadores Favoritos</span>
+    <h2>Los Cracks de Alan</h2>
+    <p style="color:var(--muted);margin-top:12px;font-size:1rem;max-width:600px;margin-left:auto;margin-right:auto;">Desde que empecé a ver fútbol, Messi y Neymar han sido mis ídolos. Su talento, su magia con la pelota y su forma de jugar me enamoraron del fútbol para siempre. ⚽❤️</p>
   </div>
   <div class="players-grid">
 
@@ -508,6 +513,64 @@
           <span class="trophy">🏆 Ligue 1 x4</span>
           <span class="trophy">🏆 Copa de Brasil</span>
         </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PHOTOS -->
+<section id="fotos" style="background:var(--blue-mid);">
+  <div class="section-title">
+    <span>📸 Galería</span>
+    <h2>Mis Fotos Favoritas</h2>
+    <p style="color:var(--muted);margin-top:12px;font-size:1rem;">Las mejores imágenes de mis dos cracks del fútbol 🔥</p>
+  </div>
+  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+
+    <!-- MESSI PHOTO -->
+    <div style="background:var(--blue-card);border-radius:24px;overflow:hidden;border:1px solid rgba(58,134,255,0.2);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(58,134,255,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative;height:360px;background:linear-gradient(135deg,#0a1f4e,#1a3a8f);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img id="messi-img" src="messi.jpg" alt="Lionel Messi" onerror="this.style.display='none';document.getElementById('messi-placeholder').style.display='flex';"
+          style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+        <div id="messi-placeholder" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;">
+          <div style="font-size:4rem;">🩵</div>
+          <div style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:3px;color:var(--messi-color);">MESSI</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Sube tu imagen como <strong style="color:#fff;">messi.jpg</strong><br/>al repositorio de GitHub</div>
+          <label style="cursor:pointer;padding:8px 20px;background:rgba(58,134,255,0.2);border:1px solid var(--messi-color);border-radius:50px;color:var(--messi-color);font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">
+            📁 Cargar imagen
+            <input type="file" accept="image/*" style="display:none" onchange="loadLocalImage(event,'messi-img','messi-placeholder')"/>
+          </label>
+        </div>
+        <div style="position:absolute;top:16px;left:16px;background:rgba(58,134,255,0.2);border:1px solid var(--messi-color);color:var(--messi-color);padding:5px 14px;border-radius:50px;font-size:0.7rem;font-weight:700;letter-spacing:2px;">🇦🇷 MESSI</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--blue-card),transparent);"></div>
+      </div>
+      <div style="padding:20px 24px;">
+        <div style="font-family:'Bebas Neue';font-size:1.6rem;letter-spacing:2px;color:var(--messi-color);">Lionel Messi</div>
+        <div style="font-size:0.85rem;color:var(--muted);margin-top:4px;line-height:1.7;">Mi ídolo número uno. La forma en que juega con la pelota es algo que nunca he visto en nadie más. ¡El mejor de la historia! 🐐</div>
+      </div>
+    </div>
+
+    <!-- NEYMAR PHOTO -->
+    <div style="background:var(--blue-card);border-radius:24px;overflow:hidden;border:1px solid rgba(255,214,10,0.2);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(255,214,10,0.25)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <div style="position:relative;height:360px;background:linear-gradient(135deg,#2a1a00,#7a4d00);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+        <img id="neymar-img" src="neymar.jpg" alt="Neymar Jr" onerror="this.style.display='none';document.getElementById('neymar-placeholder').style.display='flex';"
+          style="width:100%;height:100%;object-fit:cover;object-position:top;" />
+        <div id="neymar-placeholder" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;">
+          <div style="font-size:4rem;">💛</div>
+          <div style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:3px;color:var(--neymar-color);">NEYMAR</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Sube tu imagen como <strong style="color:#fff;">neymar.jpg</strong><br/>al repositorio de GitHub</div>
+          <label style="cursor:pointer;padding:8px 20px;background:rgba(255,214,10,0.15);border:1px solid var(--neymar-color);border-radius:50px;color:var(--neymar-color);font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">
+            📁 Cargar imagen
+            <input type="file" accept="image/*" style="display:none" onchange="loadLocalImage(event,'neymar-img','neymar-placeholder')"/>
+          </label>
+        </div>
+        <div style="position:absolute;top:16px;left:16px;background:rgba(255,214,10,0.15);border:1px solid var(--neymar-color);color:var(--neymar-color);padding:5px 14px;border-radius:50px;font-size:0.7rem;font-weight:700;letter-spacing:2px;">🇧🇷 NEYMAR</div>
+        <div style="position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(to top,var(--blue-card),transparent);"></div>
+      </div>
+      <div style="padding:20px 24px;">
+        <div style="font-family:'Bebas Neue';font-size:1.6rem;letter-spacing:2px;color:var(--neymar-color);">Neymar Jr.</div>
+        <div style="font-size:0.85rem;color:var(--muted);margin-top:4px;line-height:1.7;">El tipo más habilidoso que existe. Su regate y su magia con la pelota me vuelven loco cada vez que lo veo jugar. ¡Crack total! ⚡</div>
       </div>
     </div>
 
@@ -725,6 +788,21 @@
     p.style.animationDuration = (Math.random() * 15 + 8) + 's';
     p.style.animationDelay = (Math.random() * 10) + 's';
     container.appendChild(p);
+  }
+
+  // Load local image preview
+  function loadLocalImage(event, imgId, placeholderId) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = e => {
+      const img = document.getElementById(imgId);
+      const ph  = document.getElementById(placeholderId);
+      img.src = e.target.result;
+      img.style.display = 'block';
+      ph.style.display  = 'none';
+    };
+    reader.readAsDataURL(file);
   }
 </script>
 </body>
