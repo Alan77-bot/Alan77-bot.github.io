@@ -531,15 +531,15 @@
     <!-- MESSI PHOTO -->
     <div style="background:var(--blue-card);border-radius:24px;overflow:hidden;border:1px solid rgba(58,134,255,0.2);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(58,134,255,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
       <div style="position:relative;height:360px;background:linear-gradient(135deg,#0a1f4e,#1a3a8f);display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img id="mee-img" src="mee.jpg" alt="Lionel Messi" onerror="this.style.display='none';document.getElementById('mee-placeholder').style.display='flex';"
+        <img id="messi-img" src="mee.jpg" alt="Lionel Messi" onerror="this.style.display='none';document.getElementById('messi-placeholder').style.display='flex';"
           style="width:100%;height:100%;object-fit:cover;object-position:top;" />
-        <div id="mee-placeholder" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;">
+        <div id="messi-placeholder" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;">
           <div style="font-size:4rem;">🩵</div>
-          <div style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:3px;color:var(--mee-color);">MESSI</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Sube tu imagen como <strong style="color:#fff;">mee.jpg</strong><br/>al repositorio de GitHub</div>
+          <div style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:3px;color:var(--messi-color);">MESSI</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Sube tu imagen como <strong style="color:#fff;">messi.jpg</strong><br/>al repositorio de GitHub</div>
           <label style="cursor:pointer;padding:8px 20px;background:rgba(58,134,255,0.2);border:1px solid var(--messi-color);border-radius:50px;color:var(--messi-color);font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">
             📁 Cargar imagen
-            <input type="file" accept="image/*" style="display:none" onchange="loadLocalImage(event,'mee-img','mee-placeholder')"/>
+            <input type="file" accept="image/*" style="display:none" onchange="loadLocalImage(event,'messi-img','messi-placeholder')"/>
           </label>
         </div>
         <div style="position:absolute;top:16px;left:16px;background:rgba(58,134,255,0.2);border:1px solid var(--messi-color);color:var(--messi-color);padding:5px 14px;border-radius:50px;font-size:0.7rem;font-weight:700;letter-spacing:2px;">🇦🇷 MESSI</div>
