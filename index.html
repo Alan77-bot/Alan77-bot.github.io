@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Leyendas del Fútbol | Messi & Neymar</title>
+  <title>Messi × Neymar | Leyendas del Fútbol — Ultra Edition</title>
+<meta name="description" content="Explora las historias, títulos, curiosidades y habilidades de Lionel Messi y Neymar Jr. en una experiencia interactiva."/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -391,7 +392,130 @@
       .compare-row, .bar-row { grid-template-columns: 1fr; }
       .bar-wrap.messi-bar .bar-fill { margin-left: 0; }
     }
-  </style>
+
+    /* Mejoras visuales y accesibilidad */
+    :root { --blue-dark:#050914; --blue-mid:#080f20; --blue-card:#101c32; --muted:#a4b2c9; }
+    body { background-image: radial-gradient(circle at 15% 12%,rgba(58,134,255,.09),transparent 35%),radial-gradient(circle at 85% 65%,rgba(255,214,10,.045),transparent 30%); }
+    ::selection {background:var(--messi-color);color:white}
+    a:focus-visible,button:focus-visible,input:focus-visible {outline:3px solid var(--gold);outline-offset:4px}
+    .nav-logo {flex-shrink:0}
+    .hero {isolation:isolate}
+    .hero:before {content:"";position:absolute;inset:12% 7% 8%;border:1px solid rgba(255,255,255,.035);border-radius:40px;pointer-events:none;z-index:-1}
+    .hero h1 {text-shadow:0 10px 55px rgba(0,0,0,.35)}
+    .hero h1 .blue {filter:drop-shadow(0 0 35px rgba(58,134,255,.24))}
+    .hero h1 .yellow {filter:drop-shadow(0 0 35px rgba(255,214,10,.16))}
+    .player-card {box-shadow:0 18px 50px rgba(0,0,0,.22)}
+    .player-card .card-header:before {content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(255,255,255,.13),transparent 40%)}
+    .stat-box {transition:transform .25s,background .25s}
+    .stat-box:hover {transform:translateY(-4px);background:rgba(255,255,255,.07)}
+    .gallery-grid {max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+    .ratings-note {text-align:center;color:var(--muted);font-size:.78rem;margin:12px 0 20px}
+    .menu-toggle {display:none;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:rgba(255,255,255,.07);color:white;font-size:1.35rem;padding:7px 13px;cursor:pointer}
+    .scroll-hint {display:inline-block}
+    html {scroll-padding-top:75px}
+    @media(max-width:900px){nav{padding:14px 22px}.nav-links{gap:15px}.btn-profile{padding:10px 16px}}
+    @media(max-width:768px){
+      section{padding:70px 18px}.hero{padding:125px 18px 65px}.hero h1{font-size:clamp(4rem,17vw,7rem)}
+      .players-grid{grid-template-columns:minmax(0,1fr);gap:24px}.gallery-grid{grid-template-columns:1fr;gap:24px}
+      .menu-toggle{display:block;margin-left:auto;margin-right:14px}
+      .nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:18px 24px 24px;background:#0a1428;border-bottom:1px solid rgba(255,255,255,.12);flex-direction:column;gap:18px}
+      .nav-links.open{display:flex}.btn-profile{font-size:.72rem;padding:9px 13px}
+      .card-header{height:200px}.card-body{padding:22px}.stat-box{padding:13px 7px}.stat-value{font-size:1.65rem}
+      .compare-row{grid-template-columns:minmax(0,1fr) 85px minmax(0,1fr);gap:7px}.compare-val{padding:12px 5px;font-size:.82rem}.compare-label{font-size:.63rem;white-space:normal}
+      .bar-row{grid-template-columns:1fr}.section-title{margin-bottom:40px}
+    }
+    @media(max-width:380px){.nav-logo{font-size:1.25rem}.btn-profile{font-size:.64rem;padding:8px}.menu-toggle{margin-right:8px}.stat-label{font-size:.55rem;letter-spacing:1px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+  
+/* Edición premium: diseño editorial y experiencias */
+:root{--blue-dark:#050912;--blue-mid:#081225;--blue-card:#101d33;--muted:#a5b3c9}
+body{background:radial-gradient(ellipse 60% 28% at 10% 5%,#132f55 0%,transparent 80%),#050912}
+nav{border-bottom:1px solid rgba(255,255,255,.12);box-shadow:0 10px 35px #0003}
+.hero{min-height:92vh;background:radial-gradient(circle at 22% 40%,#3a86ff28,transparent 37%),radial-gradient(circle at 78% 55%,#ffd60a1d,transparent 36%)}
+.hero h1{filter:drop-shadow(0 15px 35px #0009);text-shadow:0 1px 0 #fff2}
+.hero::before{content:'10';position:absolute;left:3%;top:19%;font:clamp(13rem,32vw,34rem)/1 'Bebas Neue';color:#3a86ff0a;pointer-events:none}
+.hero::after{content:'11';position:absolute;right:3%;bottom:3%;font:clamp(13rem,32vw,34rem)/1 'Bebas Neue';color:#ffd60a0a;pointer-events:none}
+.player-card{background:linear-gradient(155deg,#142640,#091426);box-shadow:0 18px 65px #0005}
+.card-header{height:255px}.card-header-number{font-size:12rem;opacity:.18}
+.stat-box{background:#ffffff08}.stat-value{font-size:2.35rem}
+.section-title h2{font-size:clamp(3rem,6vw,5rem)}
+.feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:1160px;margin:auto}
+.feature{position:relative;overflow:hidden;border:1px solid #ffffff16;border-radius:24px;background:linear-gradient(145deg,#17243a,#0b1424);padding:30px;box-shadow:0 18px 40px #0003;transition:transform .3s,border-color .3s}
+.feature:hover{transform:translateY(-6px);border-color:#ffffff45}
+.feature.m{border-top:3px solid #3a86ff}.feature.n{border-top:3px solid #ffd60a}
+.feature .eyebrow{font-size:.75rem;letter-spacing:3px;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.feature h3{font:2.3rem 'Bebas Neue';letter-spacing:1px;margin:12px 0}
+.feature p,.feature li{color:#b7c5d9;line-height:1.8;font-size:.96rem}
+.feature ul{padding-left:20px;margin-top:12px}.feature li{margin:8px 0}
+.club-list{display:grid;gap:12px;margin-top:24px}.club{display:flex;align-items:center;gap:14px;padding:15px;background:#ffffff09;border:1px solid #ffffff0e;border-radius:14px}
+.club .year{font-size:.8rem;color:#c2cce0;min-width:85px}.club strong{display:block}.club small{display:block;color:#92a6c0;margin-top:4px}
+.duo-banner{max-width:1160px;margin:auto;border:1px solid #ffffff1c;border-radius:30px;overflow:hidden;background:radial-gradient(circle at 25% 40%,#3a86ff2c,transparent 40%),radial-gradient(circle at 80% 50%,#ffd60a20,transparent 42%),#101b2d;padding:clamp(28px,6vw,70px);text-align:center}
+.duo-banner h3{font:clamp(3.5rem,8vw,7rem)/.95 'Bebas Neue';letter-spacing:3px}.duo-banner p{color:#b9c8dc;line-height:1.85;max-width:750px;margin:22px auto}
+.duo-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px}.duo-facts div{padding:18px;background:#ffffff0b;border:1px solid #ffffff17;border-radius:16px}.duo-facts strong{display:block;font:2rem 'Bebas Neue';color:var(--gold)}.duo-facts span{color:#b6c5da;font-size:.8rem}
+.quiz-wrap{max-width:790px;margin:auto;border-radius:26px;padding:clamp(22px,5vw,42px);background:linear-gradient(145deg,#152842,#0b1525);border:1px solid #ffffff20;box-shadow:0 20px 70px #0005}
+.quiz-progress{font-size:.8rem;color:var(--gold);letter-spacing:2px;font-weight:700}.quiz-wrap h3{font-size:clamp(1.3rem,3vw,1.8rem);margin:20px 0}.quiz-options{display:grid;gap:12px}.quiz-option{padding:16px 18px;text-align:left;border-radius:14px;background:#ffffff09;border:1px solid #ffffff22;color:white;font:600 1rem 'Outfit';cursor:pointer;transition:.2s}.quiz-option:hover:not(:disabled){background:#3a86ff2b;border-color:#3a86ff}.quiz-option:disabled{cursor:default;opacity:.9}.quiz-option.correct{background:#1c85514a;border-color:#34d399}.quiz-option.wrong{background:#b83c3c44;border-color:#fb7185}.quiz-feedback{min-height:36px;color:#c9d8ea;margin:18px 0;line-height:1.5}.quiz-next{background:linear-gradient(90deg,#3a86ff,#1c61d1);border:0;border-radius:30px;padding:13px 26px;color:white;font-weight:700;cursor:pointer}.quiz-next:disabled{opacity:.4;cursor:not-allowed}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}
+@media(max-width:780px){.feature-grid{grid-template-columns:1fr}.duo-facts{grid-template-columns:1fr}.feature{padding:22px}.hero::before,.hero::after{display:none}.nav-links{max-height:80vh;overflow-y:auto}.hero{min-height:80vh}}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+
+/* EDICIÓN ULTRA — diseño y accesibilidad */
+:root{--glass:rgba(15,31,55,.74);--line:rgba(255,255,255,.12)}
+body{background:radial-gradient(ellipse at 10% 10%,#11264b 0,transparent 30%),#060d1a}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.1;background-image:linear-gradient(rgba(255,255,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.12) 1px,transparent 1px);background-size:64px 64px;mask-image:linear-gradient(to bottom,black,transparent)}
+nav{box-shadow:0 10px 40px #0004}nav a:focus-visible,button:focus-visible{outline:3px solid #ffd60a;outline-offset:4px}
+.hero{overflow:hidden;isolation:isolate}.hero::before,.hero::after{content:"";position:absolute;width:380px;height:380px;border-radius:50%;filter:blur(90px);z-index:-1;opacity:.23;animation:ambient 8s ease-in-out infinite alternate}.hero::before{background:#3a86ff;left:-150px;top:18%}.hero::after{background:#ffd60a;right:-150px;bottom:8%;animation-delay:2s}@keyframes ambient{to{transform:translate(70px,-35px) scale(1.2)}}
+.player-card,.tl-content,.compare-val,.quiz-wrap,.duo-banner{backdrop-filter:blur(12px);box-shadow:0 18px 60px #0003}
+.player-card{border:1px solid var(--line)}.player-card::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(125deg,#ffffff0c,transparent 38%)}
+.section-title h2{background:linear-gradient(120deg,#fff,#a9b9d2);color:transparent;background-clip:text}
+.ultra-heading{text-align:center;max-width:820px;margin:0 auto 42px}.ultra-heading p{color:var(--muted);line-height:1.8;margin-top:12px}
+.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;max-width:1200px;margin:auto}
+.feature{border:1px solid var(--line);border-radius:24px;padding:30px;background:linear-gradient(150deg,#162b4b,#0b1729);transition:transform .3s,border-color .3s}.feature:hover{transform:translateY(-7px);border-color:#6da5ff}.feature .symbol{font-size:2rem;margin-bottom:18px}.feature h3{font-size:1.22rem;margin-bottom:10px}.feature p{color:#a8b7cd;line-height:1.75;font-size:.94rem}
+.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1150px;margin:auto}.story{border-radius:24px;padding:32px;background:linear-gradient(145deg,#102e55,#0a1526);border:1px solid var(--line)}.story:nth-child(even){background:linear-gradient(145deg,#44370d,#141a20)}.story .eyebrow{font-size:.75rem;color:var(--gold);letter-spacing:3px;text-transform:uppercase}.story h3{font-family:'Bebas Neue',sans-serif;font-size:2.3rem;letter-spacing:2px;margin:12px 0}.story p{line-height:1.8;color:#b8c6da}.story ul{margin:18px 0 0;padding-left:20px;color:#c9d6e7;line-height:2}
+.switcher{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:25px}.switcher button{padding:12px 22px;background:#152b49;border:1px solid var(--line);color:#dbe5f2;border-radius:30px;cursor:pointer;font:600 1rem Outfit,sans-serif}.switcher button.active{background:#3a86ff;border-color:#3a86ff;color:white}
+.detail-panel{max-width:900px;margin:auto;background:linear-gradient(140deg,#152a48,#0b1728);border:1px solid var(--line);padding:32px;border-radius:24px;min-height:230px}.detail-panel h3{font:2.4rem 'Bebas Neue',sans-serif;letter-spacing:2px}.detail-panel p{line-height:1.9;color:#b9c7dc;margin-top:10px}.detail-panel .chips{display:flex;gap:9px;flex-wrap:wrap;margin-top:20px}.detail-panel .chips span{background:#ffffff12;border:1px solid #ffffff20;border-radius:20px;padding:7px 12px;font-size:.8rem}
+.facts-list{max-width:1000px;margin:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.fact{padding:22px;border-radius:18px;background:#0f223d;border:1px solid var(--line)}.fact strong{display:block;color:var(--gold);margin-bottom:7px}.fact p{color:#b8c8dc;line-height:1.7}
+.back-top{position:fixed;right:22px;bottom:22px;z-index:120;width:48px;height:48px;border:1px solid #ffffff50;border-radius:50%;background:#2563eb;color:white;font-size:1.3rem;cursor:pointer;box-shadow:0 8px 30px #0007;opacity:0;transform:translateY(20px);pointer-events:none;transition:.25s}.back-top.show{opacity:1;transform:none;pointer-events:auto}
+.reading-progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#3a86ff,#ffd60a);width:0;z-index:999}
+@media(max-width:800px){section{padding:72px 18px}.feature-grid,.story-grid,.facts-list{grid-template-columns:1fr}.players-grid{grid-template-columns:minmax(0,1fr)}.feature,.story,.detail-panel{padding:23px}.hero h1{font-size:clamp(4rem,18vw,8rem)}}
+@media(prefers-reduced-motion:reduce){.hero::before,.hero::after{animation:none}*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* ===== CINEMATIC PREMIUM 2026 ===== */
+:root{--blue-dark:#030713;--blue-mid:#080f22;--blue-card:#101b33;--messi-color:#58b8ff;--neymar-color:#ffe075;--text:#f5f7ff;--muted:#a3b3d0}
+body{background:#030713;background-image:radial-gradient(ellipse at 10% 10%,#15335d44,transparent 36%),radial-gradient(ellipse at 90% 42%,#6d4c1233,transparent 36%)}
+::selection{background:#ffe075;color:#071021}
+nav{border-bottom:1px solid #ffffff20;box-shadow:0 12px 50px #0004;transition:padding .35s,background .35s}
+nav.scrolled{padding-top:10px;padding-bottom:10px;background:#050b18f2}
+.nav-logo{filter:drop-shadow(0 0 16px #58b8ff66)}
+.nav-links a{position:relative}.nav-links a:after{content:'';position:absolute;bottom:-8px;left:0;width:0;height:2px;background:linear-gradient(90deg,#58b8ff,#ffe075);transition:width .3s}.nav-links a:hover:after{width:100%}
+.hero{min-height:100svh;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 25% 50%,#1162ae44,transparent 48%),radial-gradient(ellipse at 80% 48%,#d6a51e30,transparent 45%),linear-gradient(180deg,#06122a,#030713)}
+.hero:before{content:'';position:absolute;inset:-25%;z-index:-2;background:conic-gradient(from 0deg at 50% 50%,transparent 0deg,#58b8ff12 35deg,transparent 75deg,#ffe07512 150deg,transparent 205deg,#58b8ff0d 290deg,transparent 360deg);animation:premiumSpin 28s linear infinite}
+.hero:after{content:'';position:absolute;inset:0;z-index:-1;opacity:.3;background:repeating-linear-gradient(90deg,transparent 0 119px,#ffffff0b 120px 121px),linear-gradient(0deg,#030713,transparent 35%);mask-image:linear-gradient(transparent,#000)}
+@keyframes premiumSpin{to{transform:rotate(360deg)}}
+.hero h1{filter:drop-shadow(0 12px 25px #0008);transform-style:preserve-3d;animation:heroEnter 1.3s cubic-bezier(.16,1,.3,1) both!important}
+.hero h1 .blue{background:linear-gradient(120deg,#fff,#8ed9ff,#328eff);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shineText 5s linear infinite}
+.hero h1 .yellow{background:linear-gradient(120deg,#fff,#ffe075,#ffac32);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shineText 5s linear infinite reverse}
+@keyframes shineText{to{background-position:200% center}}@keyframes heroEnter{from{opacity:0;transform:translateY(80px) scale(.9);filter:blur(14px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+.hero-badge{box-shadow:0 0 45px #f5c51822,inset 0 0 25px #f5c51811;backdrop-filter:blur(10px)}
+section{scroll-margin-top:80px}
+.section-title h2,.ultra-heading h2{background:linear-gradient(135deg,#fff 35%,#a4b8d7);background-clip:text;-webkit-background-clip:text;color:transparent}
+.player-card,.feature-card,.story-card,.fact,.tl-content,.stat-box,.detail-panel,.quiz-wrap{box-shadow:0 18px 55px #0005;border:1px solid #ffffff17!important;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;position:relative}
+.player-card:hover,.feature-card:hover,.story-card:hover,.fact:hover{border-color:#ffffff50!important;box-shadow:0 25px 80px #0009,0 0 35px #58b8ff15}
+.player-card:before,.feature-card:before,.story-card:before{content:'';position:absolute;inset:0;z-index:3;pointer-events:none;border-radius:inherit;background:radial-gradient(500px circle at var(--mx,50%) var(--my,50%),#ffffff16,transparent 42%);opacity:0;transition:opacity .25s}.player-card:hover:before,.feature-card:hover:before,.story-card:hover:before{opacity:1}
+.card-header{min-height:240px}.card-header-number{animation:numberFloat 5s ease-in-out infinite}@keyframes numberFloat{50%{transform:translateY(-13px) rotate(-3deg)}}
+.stat-value{font-size:clamp(2rem,4vw,3rem)}
+.trophy{transition:transform .25s,background .25s}.trophy:hover{transform:translateY(-4px)}
+.tl-dot{animation:pulseDot 2.5s ease-in-out infinite}@keyframes pulseDot{50%{box-shadow:0 0 0 13px #58b8ff00,0 0 26px currentColor}}
+.btn-profile,.btn-cta,.quiz-next{position:relative;overflow:hidden;isolation:isolate}.btn-profile:after,.btn-cta:after,.quiz-next:after{content:'';position:absolute;inset:-70%;background:linear-gradient(110deg,transparent 40%,#ffffff60 50%,transparent 60%);transform:translateX(-100%);transition:transform .7s;pointer-events:none}.btn-profile:hover:after,.btn-cta:hover:after,.quiz-next:hover:after{transform:translateX(100%)}
+.premium-orb{position:absolute;z-index:-1;border-radius:50%;filter:blur(2px);pointer-events:none;animation:orbDrift 8s ease-in-out infinite alternate}.orb-blue{width:240px;height:240px;left:-110px;top:26%;background:radial-gradient(circle,#58b8ff45,transparent 70%)}.orb-gold{width:320px;height:320px;right:-130px;top:20%;background:radial-gradient(circle,#ffe0753a,transparent 70%);animation-delay:-3s}@keyframes orbDrift{to{transform:translate(35px,-50px) scale(1.2)}}
+.premium-marquee{position:relative;z-index:2;overflow:hidden;padding:14px 0;background:linear-gradient(90deg,#0c244b,#1b2342,#4b3510);border-block:1px solid #ffffff22;white-space:nowrap}.premium-marquee-track{display:flex;width:max-content;gap:40px;animation:marqueeRun 32s linear infinite}.premium-marquee span{font:1.15rem 'Bebas Neue',sans-serif;letter-spacing:4px;color:#f7f7ff}.premium-marquee b{color:#ffe075}@keyframes marqueeRun{to{transform:translateX(-50%)}}
+.premium-intro{position:relative;z-index:2;text-align:center;padding:90px 24px 30px;max-width:950px;margin:auto}.premium-intro h2{font:clamp(3rem,7vw,6rem)/.95 'Bebas Neue',sans-serif;letter-spacing:3px}.premium-intro p{color:var(--muted);font-size:1.1rem;line-height:1.8;margin-top:20px}.premium-intro strong{color:#ffe075}
+.premium-sparks{position:fixed;inset:0;pointer-events:none;z-index:98;overflow:hidden}.premium-spark{position:absolute;width:5px;height:5px;border-radius:50%;background:#ffe075;box-shadow:0 0 12px #ffe075;animation:sparkFade .7s ease-out forwards}@keyframes sparkFade{to{opacity:0;transform:translateY(-25px) scale(0)}}
+.reveal{transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+@media(max-width:768px){.hero h1{font-size:clamp(4rem,16vw,7rem)}.premium-intro{padding-top:65px}.premium-marquee span{font-size:1rem}.orb-blue,.orb-gold{width:180px;height:180px}section{padding-left:18px!important;padding-right:18px!important}.players-grid{grid-template-columns:minmax(0,1fr)!important}.premium-intro h2{font-size:3.2rem}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+</style>
 </head>
 <body>
 
@@ -399,12 +523,16 @@
 <div id="particles"></div>
 
 <!-- NAV -->
-<nav>
-  <div class="nav-logo">⚽ Legends</div>
-  <ul class="nav-links">
+<nav aria-label="Navegación principal">
+  <a href="#inicio" class="nav-logo" style="text-decoration:none">⚽ Legends</a>
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
+  <ul class="nav-links" id="nav-links">
     <li><a href="#jugadores">Jugadores</a></li>
     <li><a href="#fotos">Fotos</a></li>
     <li><a href="#timeline">Historia</a></li>
+    <li><a href="#trayectorias">Trayectorias</a></li>
+    <li><a href="#dupla">La dupla</a></li>
+    <li><a href="#quiz">Quiz</a></li>
     <li><a href="#comparacion">Comparación</a></li>
   </ul>
   <a class="btn-profile" href="https://github.com/Alan77-bot" target="_blank" rel="noopener">
@@ -414,7 +542,7 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="inicio"><div class="premium-orb orb-blue" aria-hidden="true"></div><div class="premium-orb orb-gold" aria-hidden="true"></div>
   <div class="hero-badge">⚽ La Página de Alan Peñaloza</div>
   <h1>
     <span class="blue">MESSI</span><br/>
@@ -426,10 +554,11 @@
   <div style="margin-top:20px;padding:16px 28px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;font-size:0.9rem;color:var(--muted);max-width:500px;animation:fadeUp 0.8s 0.5s ease both;">
     💬 <em>"El fútbol no es solo un deporte, es una forma de sentir la vida"</em> — Alan
   </div>
-  <div class="scroll-hint" style="margin-top:40px;">↓ &nbsp; Scroll para explorar &nbsp; ↓</div>
+  <a href="#jugadores" class="scroll-hint" style="margin-top:40px;text-decoration:none;">↓ &nbsp; Scroll para explorar &nbsp; ↓</a>
 </section>
 
 <!-- PLAYERS -->
+<div class="premium-marquee" aria-label="Messi y Neymar, dos leyendas"><div class="premium-marquee-track"><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span><span>✦ <b>MESSI</b> · VISIÓN · MAGIA · <b>NEYMAR</b> · REGATE · LEYENDAS</span></div></div><div class="premium-intro reveal"><h2>DOS ESTRELLAS.<br><span style="color:#ffe075">UNA MISMA PASIÓN.</span></h2><p>De Rosario a Santos, del Camp Nou a París. Descubre los momentos, las jugadas y los títulos que convirtieron a <strong>Lionel Messi</strong> y <strong>Neymar Jr.</strong> en dos íconos del fútbol mundial.</p></div>
 <section id="jugadores">
   <div class="section-title">
     <span>⭐ Mis Jugadores Favoritos</span>
@@ -484,12 +613,12 @@
         <div class="card-header-number">11</div>
         <div>
           <div class="card-name">Neymar Jr.</div>
-          <div class="card-country">Ney · Al-Hilal</div>
+          <div class="card-country">Ney · Brasil</div>
         </div>
       </div>
       <div class="card-body">
         <p class="card-bio">
-          Nacido el 5 de febrero de 1992 en Mogi das Cruzes, Brasil. Uno de los jugadores más habilidosos y creativos del mundo. Su regate, velocidad y capacidad para el espectáculo lo hacen único. Es el máximo goleador histórico de la Selección de Brasil con más de 79 goles.
+          Nacido el 5 de febrero de 1992 en Mogi das Cruzes, Brasil. Uno de los jugadores más habilidosos y creativos del mundo. Su regate, velocidad y capacidad para el espectáculo lo hacen único. En 2023 se convirtió en el máximo goleador de la selección brasileña según el registro de la FIFA.
         </p>
         <div class="stats-grid">
           <div class="stat-box">
@@ -526,17 +655,17 @@
     <h2>Mis Fotos Favoritas</h2>
     <p style="color:var(--muted);margin-top:12px;font-size:1rem;">Las mejores imágenes de mis dos cracks del fútbol 🔥</p>
   </div>
-  <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+  <div class="gallery-grid">
 
     <!-- MESSI PHOTO -->
     <div style="background:var(--blue-card);border-radius:24px;overflow:hidden;border:1px solid rgba(58,134,255,0.2);transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 60px rgba(58,134,255,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
       <div style="position:relative;height:360px;background:linear-gradient(135deg,#0a1f4e,#1a3a8f);display:flex;align-items:center;justify-content:center;overflow:hidden;">
-        <img id="messi-img" src="mee.jpg" alt="Lionel Messi" onerror="this.style.display='none';document.getElementById('messi-placeholder').style.display='flex';"
+        <img id="messi-img" src="messi.jpg" alt="Lionel Messi" onerror="this.style.display='none';document.getElementById('messi-placeholder').style.display='flex';"
           style="width:100%;height:100%;object-fit:cover;object-position:top;" />
         <div id="messi-placeholder" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;">
           <div style="font-size:4rem;">🩵</div>
           <div style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:3px;color:var(--messi-color);">MESSI</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Sube tu imagen como <strong style="color:#fff;">messi.jpg</strong><br/>al repositorio de GitHub</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Coloca <strong style="color:#fff;">messi.jpg</strong> junto al HTML para publicarla</div>
           <label style="cursor:pointer;padding:8px 20px;background:rgba(58,134,255,0.2);border:1px solid var(--messi-color);border-radius:50px;color:var(--messi-color);font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">
             📁 Cargar imagen
             <input type="file" accept="image/*" style="display:none" onchange="loadLocalImage(event,'messi-img','messi-placeholder')"/>
@@ -559,7 +688,7 @@
         <div id="neymar-placeholder" style="display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:20px;">
           <div style="font-size:4rem;">💛</div>
           <div style="font-family:'Bebas Neue';font-size:2rem;letter-spacing:3px;color:var(--neymar-color);">NEYMAR</div>
-          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Sube tu imagen como <strong style="color:#fff;">neymar.jpg</strong><br/>al repositorio de GitHub</div>
+          <div style="font-size:0.8rem;color:var(--muted);line-height:1.6;">Coloca <strong style="color:#fff;">neymar.jpg</strong> junto al HTML para publicarla</div>
           <label style="cursor:pointer;padding:8px 20px;background:rgba(255,214,10,0.15);border:1px solid var(--neymar-color);border-radius:50px;color:var(--neymar-color);font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;">
             📁 Cargar imagen
             <input type="file" accept="image/*" style="display:none" onchange="loadLocalImage(event,'neymar-img','neymar-placeholder')"/>
@@ -588,7 +717,7 @@
     <div class="tl-item messi-ev">
       <div class="tl-content">
         <div class="tl-year">2005</div>
-        <div class="tl-text">Messi debuta oficialmente con el FC Barcelona a los 17 años y marca su primer gol en La Liga.</div>
+        <div class="tl-text">Messi marca su primer gol oficial con el FC Barcelona a los 17 años.</div>
       </div>
       <div class="tl-dot"></div>
       <div class="tl-spacer"></div>
@@ -642,7 +771,7 @@
     <div class="tl-item messi-ev">
       <div class="tl-content">
         <div class="tl-year">2022</div>
-        <div class="tl-text">Messi lidera a Argentina al título del Mundial de Qatar. Completa su leyenda. 8vo Balón de Oro.</div>
+        <div class="tl-text">Messi lidera a Argentina al título del Mundial de Qatar. En 2023 recibe su octavo Balón de Oro.</div>
       </div>
       <div class="tl-dot"></div>
       <div class="tl-spacer"></div>
@@ -653,7 +782,7 @@
       <div class="tl-dot"></div>
       <div class="tl-content">
         <div class="tl-year">2024</div>
-        <div class="tl-text">Neymar supera a Pelé como máximo goleador histórico de Brasil. Un récord histórico para la Canarinha.</div>
+        <div class="tl-text">Neymar consolida su legado como máximo goleador de la selección brasileña, récord alcanzado en 2023.</div>
       </div>
     </div>
 
@@ -686,6 +815,7 @@
       <div class="compare-val neymar-v">Derecho</div>
     </div>
 
+    <p class="ratings-note">Puntuaciones ilustrativas de aficionados, no estadísticas oficiales.</p>
     <!-- Skill bars -->
     <div style="margin-top:30px; background:var(--blue-card); border-radius:20px; padding:32px; border:1px solid rgba(255,255,255,0.06);">
 
@@ -762,6 +892,32 @@
   </div>
 </section>
 
+
+<section id="trayectorias">
+  <div class="section-title"><span>⚽ De promesas a leyendas</span><h2>Sus caminos a la grandeza</h2><p style="color:var(--muted);margin:14px auto;max-width:680px">Dos historias diferentes, un mismo amor por el balón. Conoce sus clubes, sus orígenes y lo que los hace especiales.</p></div>
+  <div class="feature-grid">
+    <article class="feature m reveal"><div class="eyebrow">🇦🇷 Lionel Andrés Messi</div><h3>El genio de Rosario</h3><p>Messi nació el 24 de junio de 1987 en Rosario, Argentina. Se formó en las categorías juveniles de Newell's Old Boys antes de trasladarse a Barcelona. Su control en espacios reducidos, precisión con la zurda y capacidad para leer el juego lo convirtieron en una referencia del fútbol mundial.</p><div class="club-list"><div class="club"><span class="year">2000–2021</span><div><strong>FC Barcelona</strong><small>Cantera y primer equipo desde 2004; etapa histórica de títulos y récords</small></div></div><div class="club"><span class="year">2021–2023</span><div><strong>Paris Saint-Germain</strong><small>Una nueva etapa en Francia y reencuentro con Neymar</small></div></div><div class="club"><span class="year">Desde 2023</span><div><strong>Inter Miami</strong><small>Nuevo capítulo en el fútbol de Estados Unidos</small></div></div></div></article>
+    <article class="feature n reveal"><div class="eyebrow">🇧🇷 Neymar da Silva Santos Júnior</div><h3>La alegría del fútbol brasileño</h3><p>Neymar nació el 5 de febrero de 1992 en Mogi das Cruzes, Brasil. Se dio a conocer en Santos por su creatividad, regates impredecibles y personalidad dentro del campo. Su fútbol combina improvisación, técnica y una gran capacidad para generar oportunidades.</p><div class="club-list"><div class="club"><span class="year">2009–2013</span><div><strong>Santos FC</strong><small>Explosión como figura y campeón de la Libertadores de 2011</small></div></div><div class="club"><span class="year">2013–2017</span><div><strong>FC Barcelona</strong><small>Formó el recordado tridente MSN</small></div></div><div class="club"><span class="year">2017–2023</span><div><strong>Paris Saint-Germain</strong><small>Protagonista del ataque parisino</small></div></div><div class="club"><span class="year">2023–2025</span><div><strong>Al-Hilal</strong><small>Etapa marcada por problemas físicos</small></div></div><div class="club"><span class="year">Desde 2025</span><div><strong>Regreso a Santos</strong><small>Vuelta al club donde comenzó su historia</small></div></div></div></article>
+    <article class="feature m reveal"><div class="eyebrow">🎯 Estilo de juego</div><h3>¿Qué hace único a Messi?</h3><p>Sus cambios de dirección con el balón pegado al pie, la visión para asistir a sus compañeros y la precisión de sus definiciones. Puede crear una jugada desde el mediocampo y terminarla con un gol o una asistencia.</p><ul><li>Conducción y regate en espacios reducidos.</li><li>Pases filtrados y visión de juego.</li><li>Definición y tiros libres.</li><li>Liderazgo con Argentina, campeona del Mundial 2022.</li></ul></article>
+    <article class="feature n reveal"><div class="eyebrow">✨ Estilo de juego</div><h3>¿Qué hace único a Neymar?</h3><p>Su creatividad convierte cada ataque en una sorpresa. Destaca por la habilidad en el uno contra uno, las combinaciones rápidas y su capacidad para desequilibrar defensas con recursos técnicos.</p><ul><li>Regates, fintas y cambios de ritmo.</li><li>Asistencias y creación de ocasiones.</li><li>Combinaciones en espacios cortos.</li><li>Campeón olímpico con Brasil en Río 2016.</li></ul></article>
+  </div>
+</section>
+<section id="dupla" style="background:var(--blue-mid)"><div class="section-title"><span>🤝 Una conexión inolvidable</span><h2>Messi + Neymar</h2></div><div class="duo-banner reveal"><span style="color:var(--gold);letter-spacing:4px;font-weight:700">BARCELONA • PARÍS • AMISTAD</span><h3><span style="color:var(--messi-color)">MAGIA</span> EN <span style="color:var(--neymar-color)">EQUIPO</span></h3><p>Messi y Neymar compartieron vestuario en el Barcelona entre 2013 y 2017. Junto a Luis Suárez formaron la famosa MSN, un ataque que combinaba goles, asistencias y jugadas espectaculares. En 2015 conquistaron el triplete: Liga, Copa del Rey y Champions League. Volvieron a coincidir en el PSG entre 2021 y 2023.</p><div class="duo-facts"><div><strong>2013–2017</strong><span>Juntos en Barcelona</span></div><div><strong>2015</strong><span>Triplete con la MSN</span></div><div><strong>2021–2023</strong><span>Reencuentro en París</span></div></div></div></section>
+<section id="quiz"><div class="section-title"><span>🧠 Pon a prueba tu pasión</span><h2>¿Cuánto sabes de los cracks?</h2></div><div class="quiz-wrap reveal" aria-live="polite"><div id="quiz-progress" class="quiz-progress">PREGUNTA 1 DE 5</div><h3 id="quiz-question"></h3><div id="quiz-options" class="quiz-options"></div><p id="quiz-feedback" class="quiz-feedback"></p><button class="quiz-next" id="quiz-next" disabled>Siguiente pregunta →</button></div></section>
+
+
+<section id="legado" aria-labelledby="legado-title"><div class="ultra-heading"><span style="color:var(--gold);letter-spacing:3px">MÁS QUE FÚTBOL</span><h2 id="legado-title" style="font:clamp(2.8rem,6vw,5rem) 'Bebas Neue',sans-serif">DOS FORMAS DE HACER HISTORIA</h2><p>La precisión de Messi y la creatividad de Neymar marcaron una época. Explora qué los hace únicos dentro del campo.</p></div><div class="feature-grid">
+<article class="feature reveal"><div class="symbol">🎯</div><h3>La visión de Messi</h3><p>Sus pases filtrados, cambios de ritmo y lectura de espacios convierten jugadas difíciles en oportunidades de gol.</p></article>
+<article class="feature reveal"><div class="symbol">✨</div><h3>La magia de Neymar</h3><p>Su improvisación, regate y capacidad para desequilibrar en el uno contra uno aportan espectáculo y creatividad.</p></article>
+<article class="feature reveal"><div class="symbol">🤝</div><h3>Una dupla inolvidable</h3><p>En Barcelona y París compartieron asociaciones rápidas, asistencias y momentos que quedaron en la memoria de los aficionados.</p></article>
+</div></section>
+<section id="historias" style="background:#091526"><div class="ultra-heading"><span style="color:var(--gold);letter-spacing:3px">BIOGRAFÍAS AMPLIADAS</span><h2 style="font:clamp(2.8rem,6vw,5rem) 'Bebas Neue',sans-serif">DE SUS INICIOS A LA ÉLITE</h2><p>Dos caminos diferentes que se cruzaron en el fútbol europeo.</p></div><div class="story-grid">
+<article class="story reveal"><span class="eyebrow">Argentina · Rosario</span><h3>LIONEL MESSI</h3><p>Comenzó a jugar desde pequeño en Rosario. Se formó en las categorías juveniles de Newell's Old Boys antes de viajar a España para incorporarse a la cantera del FC Barcelona. Su talento lo llevó a convertirse en referente del club y de la selección argentina.</p><ul><li>FC Barcelona: consolidación y múltiples títulos</li><li>Paris Saint-Germain: etapa en Francia</li><li>Inter Miami: nueva etapa en Estados Unidos</li><li>Argentina: Copa América y Mundial 2022</li></ul></article>
+<article class="story reveal"><span class="eyebrow">Brasil · Mogi das Cruzes</span><h3>NEYMAR JR.</h3><p>Se dio a conocer en el Santos FC gracias a su técnica y sus goles. Su llegada al Barcelona lo reunió con Messi y Suárez. Después protagonizó un traspaso histórico al PSG, jugó en Arabia Saudita y regresó a Santos en 2025.</p><ul><li>Santos FC: sus raíces en Brasil</li><li>FC Barcelona: Champions League de 2015</li><li>Paris Saint-Germain: títulos en Francia</li><li>Brasil: oro olímpico de Río 2016</li></ul></article>
+</div></section>
+<section id="explora"><div class="ultra-heading"><span style="color:var(--gold);letter-spacing:3px">EXPLORA SUS CARRERAS</span><h2 style="font:clamp(2.8rem,6vw,5rem) 'Bebas Neue',sans-serif">ELIGE A TU LEYENDA</h2><p>Selecciona un jugador para descubrir su historia, estilo y logros.</p></div><div class="switcher" role="group" aria-label="Elegir futbolista"><button type="button" id="select-messi" class="active" aria-pressed="true">🇦🇷 Lionel Messi</button><button type="button" id="select-neymar" aria-pressed="false">🇧🇷 Neymar Jr.</button></div><div class="detail-panel reveal" id="detail-panel" aria-live="polite"></div></section>
+<section id="curiosidades" style="background:#091526"><div class="ultra-heading"><span style="color:var(--gold);letter-spacing:3px">DATOS PARA FANÁTICOS</span><h2 style="font:clamp(2.8rem,6vw,5rem) 'Bebas Neue',sans-serif">¿SABÍAS QUE...?</h2></div><div class="facts-list"><div class="fact reveal"><strong>91 goles en 2012</strong><p>Messi estableció un récord de goles oficiales en un año natural.</p></div><div class="fact reveal"><strong>La MSN de 2015</strong><p>Messi, Suárez y Neymar lideraron al Barcelona hacia un triplete histórico.</p></div><div class="fact reveal"><strong>222 millones de euros</strong><p>El traspaso de Neymar del Barcelona al PSG en 2017 marcó un récord mundial.</p></div><div class="fact reveal"><strong>Qatar 2022</strong><p>Messi fue capitán de Argentina en la conquista de su tercera Copa del Mundo.</p></div></div></section>
+
 <!-- CTA -->
 <section id="cta">
   <h2>¿Quieres Saber Más<br/>Sobre Mí?</h2>
@@ -777,10 +933,23 @@
   <p>Hecho con ❤️ por <a href="https://github.com/Alan77-bot" target="_blank">Alan Peñaloza</a> &nbsp;·&nbsp; ⚽ Fútbol es pasión</p>
 </footer>
 
+<div class="reading-progress" id="reading-progress" aria-hidden="true"></div><button class="back-top" id="back-top" aria-label="Volver al inicio">↑</button>
 <script>
+  const menuButton = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  menuButton.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(open));
+    menuButton.textContent = open ? "✕" : "☰";
+  });
+  navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "☰";
+  }));
   // Generate particles
   const container = document.getElementById('particles');
-  for (let i = 0; i < 40; i++) {
+  for (let i = 0; i < (window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 28); i++) {
     const p = document.createElement('div');
     p.className = 'particle';
     p.style.left = Math.random() * 100 + '%';
@@ -804,6 +973,48 @@
     };
     reader.readAsDataURL(file);
   }
+
+const trivia=[
+ {q:'¿En qué ciudad nació Lionel Messi?',o:['Buenos Aires','Rosario','Córdoba'],a:1,e:'Messi nació en Rosario, Argentina, en 1987.'},
+ {q:'¿En qué club brasileño comenzó Neymar su carrera profesional?',o:['Flamengo','Palmeiras','Santos FC'],a:2,e:'Neymar debutó profesionalmente en Santos en 2009.'},
+ {q:'¿Qué jugadores formaban el tridente MSN?',o:['Messi, Suárez y Neymar','Messi, Salah y Neymar','Mbappé, Suárez y Neymar'],a:0,e:'MSN era Messi, Luis Suárez y Neymar en el FC Barcelona.'},
+ {q:'¿Qué selección ganó el Mundial de 2022?',o:['Brasil','Francia','Argentina'],a:2,e:'Argentina ganó la final de Qatar 2022 ante Francia.'},
+ {q:'¿En qué año ganaron juntos la Champions League con Barcelona?',o:['2015','2018','2020'],a:0,e:'El Barcelona conquistó la Champions en 2015 con Messi y Neymar.'}
+];
+let qi=0,score=0,answered=false;
+const question=document.getElementById('quiz-question'),options=document.getElementById('quiz-options'),feedback=document.getElementById('quiz-feedback'),next=document.getElementById('quiz-next'),progress=document.getElementById('quiz-progress');
+function renderQuiz(){answered=false;feedback.textContent='';next.disabled=true;next.textContent='Siguiente pregunta →';const t=trivia[qi];progress.textContent=`PREGUNTA ${qi+1} DE ${trivia.length}`;question.textContent=t.q;options.replaceChildren();t.o.forEach((answer,i)=>{const b=document.createElement('button');b.className='quiz-option';b.textContent=answer;b.addEventListener('click',()=>{if(answered)return;answered=true;if(i===t.a)score++;options.querySelectorAll('button').forEach((x,j)=>{x.disabled=true;if(j===t.a)x.classList.add('correct');else if(j===i)x.classList.add('wrong')});feedback.textContent=(i===t.a?'¡Correcto! ':'No exactamente. ')+t.e;next.disabled=false;next.textContent=qi===trivia.length-1?'Ver resultado →':'Siguiente pregunta →'});options.appendChild(b)})}
+next.addEventListener('click',()=>{if(qi<trivia.length-1){qi++;renderQuiz()}else{progress.textContent='RESULTADO FINAL';question.textContent=`¡Conseguiste ${score} de ${trivia.length} puntos!`;options.replaceChildren();feedback.textContent=score===5?'¡Nivel leyenda! Sabes muchísimo de Messi y Neymar.':'Buen intento. Puedes repetirlo para mejorar tu resultado.';next.textContent='Volver a jugar ↻';next.disabled=false;qi=trivia.length;next.onclick=()=>{qi=0;score=0;next.onclick=null;renderQuiz()}}});renderQuiz();
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+// Panel de jugador: datos estáticos para evitar estadísticas en vivo desactualizadas.
+const playerDetails={messi:{name:'LIONEL MESSI',text:'Un creador de juego y goleador extraordinario. Su trayectoria incluye el FC Barcelona, el PSG, el Inter Miami y la selección argentina. Ganó el Mundial de 2022, la Copa América de 2021 y 2024, y ocho Balones de Oro.',chips:['Rosario, Argentina','Pie izquierdo','Mundial 2022','8 Balones de Oro','FC Barcelona']},neymar:{name:'NEYMAR JR.',text:'Una de las grandes figuras del fútbol brasileño contemporáneo. Deslumbró en Santos, ganó la Champions League con Barcelona y brilló en PSG. También consiguió el oro olímpico con Brasil en 2016 y regresó al Santos en 2025.',chips:['Mogi das Cruzes, Brasil','Regate y creatividad','Champions 2015','Oro olímpico 2016','Santos FC']}};
+const detail=document.getElementById('detail-panel');
+function showPlayer(which){const p=playerDetails[which];detail.replaceChildren();const h=document.createElement('h3');h.textContent=p.name;const paragraph=document.createElement('p');paragraph.textContent=p.text;const chips=document.createElement('div');chips.className='chips';p.chips.forEach(t=>{const span=document.createElement('span');span.textContent=t;chips.append(span)});detail.append(h,paragraph,chips);for(const key of ['messi','neymar']){const button=document.getElementById('select-'+key);button.classList.toggle('active',key===which);button.setAttribute('aria-pressed',String(key===which))}}
+for(const key of ['messi','neymar'])document.getElementById('select-'+key).addEventListener('click',()=>showPlayer(key));showPlayer('messi');
+const backTop=document.getElementById('back-top'),readingProgress=document.getElementById('reading-progress');
+function updateScroll(){const max=document.documentElement.scrollHeight-innerHeight;readingProgress.style.width=(max>0?scrollY/max*100:0)+'%';backTop.classList.toggle('show',scrollY>500)}
+window.addEventListener('scroll',updateScroll,{passive:true});window.addEventListener('resize',updateScroll);backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));updateScroll();
+
+// Animaciones premium progresivas y respetuosas con movimiento reducido.
+(()=>{
+ const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const nav=document.querySelector('nav');
+ window.addEventListener('scroll',()=>nav?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+ if(reduced)return;
+ const hoverCards=document.querySelectorAll('.player-card,.feature-card,.story-card');
+ hoverCards.forEach(card=>{
+   card.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;card.style.setProperty('--mx',(x*100)+'%');card.style.setProperty('--my',(y*100)+'%');card.style.transform=`perspective(900px) rotateX(${(0.5-y)*5}deg) rotateY(${(x-.5)*5}deg) translateY(-5px)`});
+   card.addEventListener('pointerleave',()=>{card.style.transform='';card.style.removeProperty('--mx');card.style.removeProperty('--my')});
+ });
+ // Parallax suave del encabezado, sin interferir con botones ni accesibilidad.
+ const hero=document.querySelector('.hero');let raf=0;
+ hero?.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;hero.style.backgroundPosition=`${50+x*4}% ${50+y*4}%`;hero.querySelectorAll('.premium-orb').forEach((orb,i)=>orb.style.translate=`${x*(i? -35:35)}px ${y*30}px`)});});
+ // Pequeñas chispas al pulsar el fondo del encabezado.
+ let lastSpark=0;const sparks=document.createElement('div');sparks.className='premium-sparks';sparks.setAttribute('aria-hidden','true');document.body.append(sparks);
+ hero?.addEventListener('click',e=>{if(e.target.closest('a,button,input,label'))return;if(Date.now()-lastSpark<200)return;lastSpark=Date.now();for(let i=0;i<7;i++){const p=document.createElement('span');p.className='premium-spark';p.style.left=(e.clientX+(Math.random()-.5)*90)+'px';p.style.top=(e.clientY+(Math.random()-.5)*90)+'px';p.style.background=i%2?'#58b8ff':'#ffe075';sparks.append(p);setTimeout(()=>p.remove(),800)}});
+})();
+
 </script>
 </body>
 </html>
